@@ -8,12 +8,23 @@ $(document).ready(function() {
       answers.push(answer);
     });
 
-    // sort
+    answers.sort();
+    answers.forEach(function(lastanswer){
+      $("#shoppinglist").append("<li>" + lastanswer + "</li>");
+    });
+
+
+
+
+
+
+
+    // $("#shoppinglist").append($("<li>").text(answers));
 
     // display
 
     // generate a list shopping list
-    // $("#shoppinglist").append($("<li>").text(answer));
+
 
 
 
