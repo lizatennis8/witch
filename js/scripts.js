@@ -1,14 +1,11 @@
-$(document).ready(function() {
-  $("#formOne").submit (function(event) {
+$(document).ready(function(){
+  $("form#transportation_survey").submit(function(event){
     event.preventDefault();
-
-
-    var string = $("#sentence").val();
-    var res = string.split("o").join("-").split("e").join("-").split("a").join("-").split("i").join("-").split("u").join("-");
-    alert(res);
+    $("#work-responses").show();
+    $("input:checkbox[name=work-transportation]:checked").each(function(){
+      var workTransportationMode = $(this).val();
+      $('#work-responses').append(workTransportationMode + "<br>");
+    });
+    $('#transportation_survey').hide();
   });
 });
-//
-// .join("-")
-
-// , "a", "e", "i", "u"
