@@ -2,21 +2,13 @@ $(document).ready(function() {
   $("#formOne").submit (function(event) {
     event.preventDefault();
 
-var countby = parseInt($("#countby").val());
-var countto = parseInt($("#countto").val());
 
-var total = 0;
-for(var index = countby; index <= countto; index += countby) {
-alert(index);
-  };
-
-  // index.forEach(function(item){
-  //   $("#countresults").append("<li>" + item + "</li>");
-  //     $("#countresults").append(index);
-// });
-//
-//
-//     $("#countresults").show();
-//     $("#formOne").hide();
+    var string = $("#sentence").val();
+    var res = string.split("o").join("-").split("e").join("-").split("a").join("-").split("i").join("-").split("u").join("-");
+    alert(res);
   });
 });
+//
+// .join("-")
+
+// , "a", "e", "i", "u"
